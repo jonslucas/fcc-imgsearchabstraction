@@ -1,0 +1,17 @@
+{
+  "name": "imgabs",
+  "version": "1.0.0",
+  "description": "Simple image lookup abstraction.",
+  "main": "server.js",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "author": "Jon Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0"
+  }
+}
