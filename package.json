@@ -4,12 +4,13 @@
   "description": "Simple image lookup abstraction.",
   "main": "server.js",
   "scripts": {
-    "test": "exit 1"
+    "prestart": "eslint --ext=.js app/"
   },
   "author": "Jon Lucas",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "mongoose": "^4.4.4"
   },
   "devDependencies": {
     "eslint": "^2.2.0"
