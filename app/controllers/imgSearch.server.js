@@ -5,9 +5,8 @@
          engineId = process.env.ENGINE_ID,
            apiKey = process.env.GOOGLE_API_KEY,
              request = require('request');
-    //request.debug = true;
+
     module.exports = (req, res)=>{
-        console.log(req.query.offset);
         request({
             url: baseURL,
             qs: {
