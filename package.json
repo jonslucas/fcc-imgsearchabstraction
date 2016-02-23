@@ -14,11 +14,11 @@
   "dependencies": {
     "express": "^4.13.4",
     "mongoose": "^4.4.4",
+    "dotenv": "^2.0.0",
     "request": "^2.69.0"
   },
   "devDependencies": {
     "cssmin": "^0.4.3",
-    "dotenv": "^2.0.0",
     "eslint": "^2.2.0",
     "node-sass": "^3.4.2"
   }
