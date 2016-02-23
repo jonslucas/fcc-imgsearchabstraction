@@ -13,27 +13,23 @@
             qs: {
                 key: apiKey,
                 cx: engineId,
-                type: 'image',
+                searchType: 'image',
                 num: 10,
                 start: (parseInt(req.query.offset, 10)+1 || 1),
                 safe: 'high',
                 imgSize: 'large',
-                defaultToImageSearch: true,
+                imgType: 'photo',
                 q: req.params.search
             },
             method: 'GET'
         }, (err,resp, body)=>{
             if (err) console.error(err);
-            const data = JSON.parse(body).items.map((img, ind)=>{
-                let tn;
-                if (img.pagemap.cse_thumbnail) tn = img.pagemap['cse_thumbnail'][0].src;
-                else console.log(img);
+            const data = JSON.parse(body).items.map((img)=> {
                 return {
-                    'url': img.pagemap.cse_image[0].src,
-                    'snippet':img.snippet,
-                    'num':ind+1,
-                    'thumbnail':tn || '',
-                    'context': img.link
+                    'url': img.link,
+                    'snippet': img.snippet,
+                    'context': img.image.contextLink,
+                    'thumbnail': img.image.thumbnailLink
                 };
             });
             res.json(data);
