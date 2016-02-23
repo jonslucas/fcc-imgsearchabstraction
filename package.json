@@ -4,7 +4,9 @@
   "description": "Simple image lookup abstraction.",
   "main": "server.js",
   "scripts": {
-    "prestart": "eslint --ext=.js app/"
+    "lint": "eslint --ext=.js app/",
+    "build:css": "node-sass ./public/css/main.scss | cssmin > ./public/css/main.min.css",
+    "prestart": "npm run lint && npm run build:css"
   },
   "author": "Jon Lucas",
   "license": "ISC",
@@ -14,7 +16,9 @@
     "request": "^2.69.0"
   },
   "devDependencies": {
+    "cssmin": "^0.4.3",
     "dotenv": "^2.0.0",
-    "eslint": "^2.2.0"
+    "eslint": "^2.2.0",
+    "node-sass": "^3.4.2"
   }
 }

@@ -7,7 +7,7 @@
     module.exports = (app) => {
         app.route('/')
             .get((req, res)=>{
-               res.send('Init Route setup');
+               res.sendFile(process.cwd() + '/public/html/index.html');
             });
         app.get('/imgSearch/:search', logSearchHistory, imgSearch);
         app.get('/search/recent', recentHist);

@@ -1,0 +1,28 @@
+$fontRoot: 'https://fonts.googleapis.com/css?family=';
+@import url($fontRoot+'Raleway');
+@import url($fontRoot+'Lato');
+@import url($fontRoot+'Slabo+27px');
+
+$mainHead: 3em;
+$subHead: 1.75em;
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+}
+.header {
+  font-size: $mainHead;
+  font-family: 'Lato', sans-serif;
+  span {
+    display: block;
+  }
+}
+.usageHead {
+  font-size: $subHead;
+}
+.code {
+  color: red;
+  font-family:'Slabo 27px', serif;
+}
