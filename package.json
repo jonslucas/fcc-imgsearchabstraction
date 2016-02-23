@@ -10,9 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.13.4",
-    "mongoose": "^4.4.4"
+    "mongoose": "^4.4.4",
+    "request": "^2.69.0"
   },
   "devDependencies": {
+    "dotenv": "^2.0.0",
     "eslint": "^2.2.0"
   }
 }

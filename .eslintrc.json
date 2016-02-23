@@ -9,6 +9,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-console":0,
         "no-undef":2,
         "no-undef-init": 2,
         "no-undefined":1,
